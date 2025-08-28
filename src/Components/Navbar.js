@@ -7,19 +7,19 @@
     const { data: session } = useSession();
 
     return (
-        <nav className="navbar bg-base-200 px-6">
+        <nav className="navbar bg-[#EAE4D5] px-10">
         <div className="flex-1">
-            <Link href="/" className="btn btn-ghost normal-case text-xl">BlockShop</Link>
+            <Link href="/" className="font-bold normal-case text-xl">BlockShop</Link>
         </div>
-        <div className="flex-none gap-2">
-            <Link href="/products" className="btn btn-ghost">Products</Link>
+        <div className="flex-none gap-3">
+            <Link href="/products" className="m-4 font-semibold">Products</Link>
             {session ? (
             <>
-                <Link href="/dashboard/add-product" className="btn btn-primary">Add Product</Link>
-                <button onClick={() => signOut()} className="btn btn-secondary">Logout</button>
+                <Link href="/dashboard/add-product" className="btn btn-outline">Add Product</Link>
+                <button onClick={() => signOut()} className="btn btn-outline">Logout</button>
             </>
             ) : (
-            <Link href="/login" className="btn btn-primary">Login</Link>
+            <Link href="/login" className="btn font-semibold btn-outline">Login</Link>
             )}
         </div>
         </nav>

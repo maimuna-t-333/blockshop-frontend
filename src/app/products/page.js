@@ -16,8 +16,8 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <section className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Products</h1>
+    <section className="p-6 bg-[#B6B09F]">
+      <h1 className="text-3xl text-center font-bold mb-6">Products</h1>
       {loading ? (
         <Spinner />
       ) : (

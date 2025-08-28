@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = process.env.BACKEND_API_URL;
+// const BASE_URL = process.env.BACKEND_API_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL;
+
 
 export const fetchProducts = async () => {
   const res = await axios.get(`${BASE_URL}/products`);

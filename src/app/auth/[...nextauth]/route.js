@@ -1,9 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
-import { connectToDB } from "@/lib/db"; // your MongoDB connection
-import User from "@/models/User"; // your User model
-
+import { connectToDB } from "@/lib/db"; 
+import User from "@/models/User";
 export const POST = async (req, res) => {
   return NextAuth({
     providers: [
@@ -14,7 +13,7 @@ export const POST = async (req, res) => {
           password: { label: "Password", type: "password" },
         },
         async authorize(credentials) {
-          await connectToDB(); // connect to MongoDB
+          await connectToDB(); 
           const user = await User.findOne({ email: credentials.email });
           if (!user) throw new Error("No user found");
           const isValid = await bcrypt.compare(credentials.password, user.password);

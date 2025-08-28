@@ -30,9 +30,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-base-100">
+    <div className="flex justify-center items-center h-148 bg-[#B6B09F]">
       <Toaster />
-      <form onSubmit={handleSubmit} className="card p-6 shadow-lg w-full max-w-md">
+      <form onSubmit={handleSubmit} className="card p-6 shadow-lg bg-[#EAE4D5] w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4">Login</h2>
         <input
           type="email"
@@ -50,7 +50,7 @@ export default function LoginPage() {
           className="input input-bordered w-full mb-4"
           required
         />
-        <button type="submit" className={`btn btn-primary w-full ${loading ? "loading" : ""}`}>
+        <button type="submit" className={`btn btn-outline w-full ${loading ? "loading" : ""}`}>
           Login
         </button>
       </form>
